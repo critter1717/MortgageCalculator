@@ -37,7 +37,7 @@ public class Calculator {
         double monthlyInterest = getMonthlyInterest();
 
         double mathPower = Math.pow(1 + monthlyInterest, numberOfPayments);
-        double monthlyPayment = (principal - deposit) * (monthlyInterest * mathPower / (mathPower - 1));
+        double monthlyPayment = (principal) * (monthlyInterest * mathPower / (mathPower - 1));
 
         return monthlyPayment;
     }

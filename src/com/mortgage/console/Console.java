@@ -15,12 +15,21 @@ public class Console {
         double value;
         while (true) {
             System.out.print(promt);
-            value = person.nextDouble();
-            if (value >= min && value <= max) {
-                break;
+            try{
+                value = person.nextDouble();
+                if (value <= min || value >= max) {
+                    throw new ArithmeticException();
+                }
+                return value;
             }
-            System.out.println("Enter value between " + min + " and " + max);
+            catch(ArithmeticException e){
+                System.out.println("Enter value between " + min + " and " + max);
+            }
+
+
+
+
+
         }
-        return value;
     }
 }
