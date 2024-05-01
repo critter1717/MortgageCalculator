@@ -25,6 +25,7 @@ public class Report {
     public void printPaymentSchedule() {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
+        System.out.println("*Remaining principal amount after each month of payments*");
         System.out.println("----------------");
 
         for (double balance : calculator.getRemainingBalances()) {
